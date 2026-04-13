@@ -17,7 +17,9 @@ int load_assets(Assets *assets)
         "雙方顏色未定"
         "玩家顏色電腦顏色"
         "玩家步數電腦步數"
-        "：0123456789 /";
+        "：0123456789 /"
+        "請先選擇玩家先手或電腦先手"
+        "玩家先手，請先翻棋或行動";
 
     int codepointCount = 0;
     int *codepoints = LoadCodepoints(allText, &codepointCount);
