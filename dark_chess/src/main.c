@@ -7,16 +7,17 @@
 
 int main(void)
 {
-    const int screenWidth = 800;
-    const int screenHeight = 540;
-
+    const int screenWidth = 980;
+    const int screenHeight = 760;
+    
     InitWindow(screenWidth, screenHeight, "暗棋");
     SetTargetFPS(60);
 
     srand((unsigned int)time(NULL));
 
     Assets assets;
-    if (!load_assets(&assets)) {
+    if (!load_assets(&assets))
+    {
         CloseWindow();
         return 1;
     }
@@ -24,8 +25,10 @@ int main(void)
     Game game;
     init_game(&game);
 
-    while (!WindowShouldClose()) {
-        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+    while (!WindowShouldClose())
+    {
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+        {
             handle_player_click(&game, GetMouseX(), GetMouseY());
         }
 
