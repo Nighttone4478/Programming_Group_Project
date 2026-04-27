@@ -4,6 +4,7 @@
 *.obj
 *.dll
 *.stackdump
+*.pdf
 
 .vscode/
 upload/
